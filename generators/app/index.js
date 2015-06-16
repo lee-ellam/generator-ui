@@ -103,6 +103,10 @@ module.exports = yeoman.generators.Base.extend({
           this.templatePath('src/js/index.js'),
           this.destinationPath('src/js/index.js')
         );
+        this.copy(
+          this.templatePath('test/index.spec.js'),
+          this.destinationPath('test/index.spec.js')
+        );
         break;
       case 'template':
         mkdirp('src/templates');
@@ -127,6 +131,10 @@ module.exports = yeoman.generators.Base.extend({
         this.copy(
           this.templatePath('src/templates/index.html'),
           this.destinationPath('src/templates/index.html')
+        );
+        this.copy(
+          this.templatePath('test/index.spec.js'),
+          this.destinationPath('test/index.spec.js')
         );
         break;
     }
